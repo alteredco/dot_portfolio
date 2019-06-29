@@ -1,0 +1,30 @@
+.title {
+position: absolute;
+top: 50px;
+width: 100%;
+font-family: Comfortaa;
+font-style: normal;
+font-weight: bold;
+font-size: 2rem;
+color: #878787;
+}
+
+.title:hover {
+  color: #0C5DBF;
+}
+
+@media (min-width: 600px) {
+  .title {
+    top: 8vh;
+  }
+
+  .firstname {
+    text-align: left;
+    padding-left: 3vw;
+  }
+
+  .lastname {
+    text-align: left;
+    padding-left: 20vw;
+  }
+}

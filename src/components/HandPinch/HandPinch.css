@@ -1,0 +1,14 @@
+.hand {
+position: absolute;
+width: 20%;
+left: 5vw;
+top: 30vh;
+}
+
+@media (min-width: 600px) {
+  .hand {
+    width: 40%;
+    left: 25vw;
+    top: 40vh;
+    }
+}
