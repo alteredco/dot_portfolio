@@ -1,26 +1,26 @@
 import React from 'react';
+import SmallBtn from '../SmallBtn/SmallBtn';
 import './SideDrawer.css';
 
-const SideDrawer = props => (
-  <nav className="SideDrawer-wrapper">
-    <ul className="SideDrawer-list">
-    <li className="SideDrawer-listItem"><a href="/new" className="grey-text text-darken-3">NEW</a></li>
-    <li className="SideDrawer-listItem"><a href="/" className="grey-text text-darken-3"> TOPS</a></li>
-    <li className="SideDrawer-listItem"><a href="/" className="grey-text text-darken-3"> TROUSERS</a></li>
-    <li className="SideDrawer-listItem"><a href="/" className="grey-text text-darken-3">DRESSES</a></li>
-    <li className="SideDrawer-listItem"><a href="/" className="grey-text text-darken-3">ACCESSORIES</a></li>
-    <li className="SideDrawer-listItem"><a href="/" className="grey-text text-darken-3">CLEARANCE</a></li>
-    <li className="SideDrawer-listItem">
-      <a href="/" className="grey-text text-darken-3">About</a>
-    </li>
-    <li className="SideDrawer-listItem">
-      <a href="/" className="grey-text text-darken-3">Contact</a>
-    </li>
-    <li className="SideDrawer-listItem">
-      <a href="/" className="grey-text text-darken-3"><i className="small material-icons">shopping_cart</i></a>
-    </li>
-  </ul>
-</nav>
-)
+class SideDrawer extends React.Component {
+  render() {
+    return(
+      <nav className="SideDrawer-wrapper">
+      <ul className="SideDrawer-list">
+      <li className="SideDrawer-listItem">
+        <a href="/about">ab<span className="SideDrawer-listDot">o</span>ut</a>
+      </li>
+      <li className="SideDrawer-listItem">
+        <a href="/portfolio">portf<span className="SideDrawer-listDot">o</span>lio</a>
+      </li>
+      <li className="SideDrawer-listItem">
+        <a href="contact">c<span className="SideDrawer-listDot">o</span>ntact</a>
+      </li>
+    </ul>
+    <SmallBtn text="Close" click={this.props.smallBtnClickHandler}/>
+  </nav>
+    )
+  }
+}
 
 export default SideDrawer;

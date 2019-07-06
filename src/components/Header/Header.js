@@ -7,7 +7,7 @@ class Header extends React.Component {
     return (
       <div className="header_container">
         <div>
-          <DrawerToggleBtn click={this.drawerClickHandler}/>
+          <DrawerToggleBtn click={this.props.drawerClickHandler}/>
         </div>
       </div>
     );

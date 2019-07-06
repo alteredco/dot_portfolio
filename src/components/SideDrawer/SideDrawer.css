@@ -14,14 +14,34 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 1.75rem;
+  font-family: Comfortaa;
+  color: #0C5DBF;
+  list-style: none;
 }
 
-.SideDrawer-list {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
+.SideDrawer-listItem {
+  margin-top: 1rem;
+}
+
+.SideDrawer-listItem a {
+  text-decoration: none;
+}
+
+.SideDrawer-listDot {
+  color: #FF56D0;
+  font-weight: 900;
 }
 
 .SideDrawer-listItem:hover,
 .SideDrawer-listItem:active {
-  color: #000;
+color: #FF56D0;
+font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .SideDrawer-list {
+    font-size: 3rem;
+  }
+
 }
