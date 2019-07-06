@@ -9,10 +9,11 @@
   cursor: pointer;
   padding: 0;
   box-sizing: border-box;
-}
-
-.DrawerToggleBtn-button:focus {
-  outline: none;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
 }
 
 .DrawerToggleBtn-line {
@@ -21,6 +22,7 @@
   background-color: #fff;
 }
 
-.DrawerToggleBtn-line:focus {
- background-color: #E3C147;
+.DrawerToggleBtn-button:hover{
+ transform: scale(1.5)
 }
+
