@@ -5,9 +5,8 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Title from './components/Title/Title';
 import CircleBtn from './components/CircleBtn/CircleBtn';
-import HandPinch from './components/HandPinch/HandPinch';
 
-class App extends Component {
+class Contact extends Component {
   state = {
     sideDrawerOpen: false
   };
@@ -37,26 +36,23 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler}/>;
     }
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="Contact">
+        <header className="Contact-header">
         <Header 
           drawerClickHandler={this.drawerToggleClickHandler} 
           />
         {sideDrawer}
         {backdrop}
-        <Title 
-          header1="Wendy"
-          header2="Kakuda" 
-          />
+        <Title header1="This is Contact page."
+        />
         <CircleBtn 
           text = ">" 
           click={this.circleBtnClickHandler}
           />
-        <HandPinch />
         </header>
       </div>
     );
   }
 }
 
-export default App;
+export default Contact;
