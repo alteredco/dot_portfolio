@@ -14,7 +14,7 @@ ReactDOM.render(
       <Switch>
        {/*  /* IMPORTANT! add any other routes ABOVE the App Route !*/ }
        <Route path="/contact" component={Contact} />
-       <Route path="/portfolio" component={Portfolio} />
+       <Route path="/projects" component={Portfolio} />
        <Route path="/about" component={About} />
        <Route path="/app" component={App} />
        <Route path="/index.html" component={App} />

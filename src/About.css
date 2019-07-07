@@ -1,0 +1,29 @@
+.About {
+  display: inline-block;
+  text-align: center;
+  max-width: 600px;
+}
+
+.About__text {
+  display: inline-block;
+  text-align: left;
+  font-size: .75em;
+  font-family: "Raleway";
+  width: 80%;
+}
+
+.About__resume {
+  display: inline-block;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .About {
+    max-width:100%;
+  }
+
+    .About__text {
+    font-size: 2em;
+    width: 90%;
+  }
+}

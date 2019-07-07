@@ -3,6 +3,7 @@
   display: flex;
   align-items: left;
   margin-left: 4em;
+  margin-top:0;
 }
 
 .circleBtn {
@@ -19,7 +20,7 @@ transition: 0.3s;
 .circleBtn:hover {
   background-color: #E3C147;
   border: solid 2px#E3C147;
-  font-size: 2em;
+  font-size: 1.75em;
   color: #fff;
 }
 

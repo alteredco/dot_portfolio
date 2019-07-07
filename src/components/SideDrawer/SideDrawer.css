@@ -8,14 +8,20 @@
   top: 0;
   left: 0;
   z-index: 200;
+    -webkit-transition: opacity .7s ease-in;
+  -moz-transition: opacity .7s ease-in;
+  -ms-transition: opacity .7s ease-in;
+  -o-transition: opacity .7s ease-in;
+  transition: opacity .7s ease-in;
 }
 
 .SideDrawer-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
   font-size: 1.75rem;
-  font-family: Comfortaa;
+  font-family: "Comfortaa";
   color: #0C5DBF;
   list-style: none;
 }
@@ -26,6 +32,7 @@
 
 .SideDrawer-listItem a {
   text-decoration: none;
+  color: #0C5DBF;
 }
 
 .SideDrawer-listDot {

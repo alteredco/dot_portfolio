@@ -11,7 +11,7 @@ class SideDrawer extends React.Component {
         <a href="/about">ab<span className="SideDrawer-listDot">o</span>ut</a>
       </li>
       <li className="SideDrawer-listItem">
-        <a href="/portfolio">portf<span className="SideDrawer-listDot">o</span>lio</a>
+        <a href="/projects">pr<span className="SideDrawer-listDot">o</span>jects</a>
       </li>
       <li className="SideDrawer-listItem">
         <a href="contact">c<span className="SideDrawer-listDot">o</span>ntact</a>

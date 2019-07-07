@@ -49,7 +49,7 @@ class App extends Component {
           header2="Kakuda" 
           />
         <CircleBtn 
-          text = ">" 
+          text = "..." 
           click={this.circleBtnClickHandler}
           />
         <HandPinch />
