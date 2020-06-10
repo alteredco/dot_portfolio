@@ -6,6 +6,8 @@ import App from './App';
 import About from './About';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import Resume from './Resume';
+
 
 ReactDOM.render(
    
@@ -13,6 +15,7 @@ ReactDOM.render(
     <div>
       <Switch>
        {/*  /* IMPORTANT! add any other routes ABOVE the App Route !*/ }
+       <Route path="/resume" component={Resume}/>
        <Route path="/contact" component={Contact} />
        <Route path="/projects" component={Portfolio} />
        <Route path="/about" component={About} />

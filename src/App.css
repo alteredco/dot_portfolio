@@ -10,12 +10,18 @@
   color: white;
 }
 
-.hand {
-  width: 40%;
+.App-open {
+  width: 80vw;
 }
 
-@media (min-width: 600px) {
-  .hand {
-    width: 80%;
+@media (min-width: 700px) {
+  .App-open {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .DotBtn {
+    padding-left: 10vw;
   }
 }

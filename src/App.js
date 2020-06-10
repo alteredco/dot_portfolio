@@ -12,9 +12,7 @@ const App =() =>{
   const [hover, setHover] =useState(false);
 
   const drawerToggleClickHandler = () => setDrawer(!drawer);
-
   const backdropClickHandler = () => setDrawer(!drawer);
-
   const circleBtnClickHandler = () => setDrawer(!drawer);
 
     let sideDrawer;
@@ -37,12 +35,14 @@ const App =() =>{
           header1="Wendy"
           header2="Kakuda" 
           />
-          <div onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
-        <CircleBtn 
-          text = {hover?"open":"•••"}
-          click={circleBtnClickHandler}
-          />
-        <HandPinch  hover = {hover}/>
+        <div className="App-open" onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
+          <div className="DotBtn">
+            <CircleBtn 
+              text = {hover?"open":"•••"}
+              click={circleBtnClickHandler}
+              />
+          </div>
+          <HandPinch  hover = {hover}/>
         </div>
         </header>
       </div>

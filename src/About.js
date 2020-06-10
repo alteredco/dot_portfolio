@@ -19,13 +19,27 @@ class About extends Component {
     });
   };
 
-  resumeBtnClickHandler =() => {
-    return '/resume';
-  }
-
   backdropClickHandler = () => {
     this.setState({sideDrawerOpen:false});
   };
+
+  // resumeBtnClickHandler=(file, text)=>{
+  //  function download(file, text) {
+  //   let  element = document.createElement('a'); 
+  //   element.setAttribute('href', 'data:text/plain;charset=utf-8, ' + encodeURIComponent(text)); 
+  //   element.setAttribute('download', file); 
+    
+  //   document.body.appendChild(element); 
+  //   element.click(); 
+  //   document.body.removeChild(element); 
+  // } 
+  
+  // document.getElementById("btn").addEventListener("click", function() { 
+  // let  text = document.getElementById("text").value; 
+  // let filename = "Wendy_Kakuda_CV.pdf"; 
+  // download(filename, text); 
+  // }, false); 
+  // }
 
   render() {
     let sideDrawer;
@@ -64,10 +78,11 @@ class About extends Component {
           <Title 
           header1="view resume"
           />
+          <a href="https://drive.google.com/file/d/183NngOFUGKO5YVBGvW6zVPPu3lAig-5M/view?usp=sharing" rel="noopener noreferrer" target="_blank">
           <CircleBtn 
-          text="open"
-          click={this.resumeBtnClickHandler}
+          text="view"
           />
+          </a>
         </div>
         <Footer />
       </div>

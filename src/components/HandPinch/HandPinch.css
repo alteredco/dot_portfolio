@@ -1,10 +1,10 @@
-.hand {
-display: inline-block;
-width: 80%;
+.hand__container {
+  display: inline-block;
+  width: 80%;
 }
 
 @media (min-width: 600px) {
-  .hand {
+  .hand__container {
     width: 40%;
-    }
+  }
 }

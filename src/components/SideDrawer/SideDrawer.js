@@ -7,6 +7,9 @@ const SideDrawer=(props)=> {
       <nav className="SideDrawer-wrapper">
       <ul className="SideDrawer-list">
       <li className="SideDrawer-listItem">
+        <a href="/">h<span className="SideDrawer-listDot">o</span>me</a>
+      </li>
+      <li className="SideDrawer-listItem">
         <a href="/about">ab<span className="SideDrawer-listDot">o</span>ut</a>
       </li>
       <li className="SideDrawer-listItem">

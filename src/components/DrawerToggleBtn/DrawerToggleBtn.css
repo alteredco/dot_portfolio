@@ -6,39 +6,39 @@
   height: 40px;
   background: transparent;
   border: none;
+  outline: none;
   cursor: pointer;
-  margin:0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-transition: all .7s ease;
-  -moz-transition: all .7s ease;
-  -ms-transition: all .7s ease;
-  -o-transition: all .7s ease;
-  transition: all .7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .DrawerToggleBtn-line {
   width: 40px;
-  height: .125rem;
+  height: 0.125rem;
   margin-bottom: 1rem;
   background-color: #fff;
 }
 
-.DrawerToggleBtn-button:hover{
- transform: scale(1.5);
+.DrawerToggleBtn-button:hover {
+  transform: scale(1.5);
 }
 
 @media (min-width: 600px) {
   .DrawerToggleBtn-button {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
   }
 
   .DrawerToggleBtn-line {
-  width: 50px;
-  height: .1rem;
-  margin-bottom: 1rem;
-  background-color: #fff;
+    width: 50px;
+    height: 0.1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+  }
 }
-}
-
