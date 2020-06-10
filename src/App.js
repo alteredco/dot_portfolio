@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import SideDrawer from './components/SideDrawer/SideDrawer';
@@ -7,40 +7,29 @@ import Title from './components/Title/Title';
 import CircleBtn from './components/CircleBtn/CircleBtn';
 import HandPinch from './components/HandPinch/HandPinch';
 
-class App extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
+const App =() =>{
+  const [drawer, setDrawer] = useState(false);
+  const [hover, setHover] =useState(false);
 
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  };
+  const drawerToggleClickHandler = () => setDrawer(!drawer);
 
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen:false});
-  };
+  const backdropClickHandler = () => setDrawer(!drawer);
 
-  circleBtnClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  }
+  const circleBtnClickHandler = () => setDrawer(!drawer);
 
-  render() {
     let sideDrawer;
     let backdrop;
 
-    if(this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer   smallBtnClickHandler ={this.backdropClickHandler}/>;
-      backdrop = <Backdrop click={this.backdropClickHandler}/>;
-    }
+    if(drawer) {
+      sideDrawer = <SideDrawer   smallBtnClickHandler ={backdropClickHandler}/>;
+      backdrop = <Backdrop click={backdropClickHandler}/>;
+    };
+
     return (
       <div className="App">
         <header className="App-header">
         <Header 
-          drawerClickHandler={this.drawerToggleClickHandler} 
+          drawerClickHandler={drawerToggleClickHandler} 
           />
         {sideDrawer}
         {backdrop}
@@ -48,15 +37,16 @@ class App extends Component {
           header1="Wendy"
           header2="Kakuda" 
           />
+          <div onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
         <CircleBtn 
-          text = "..." 
-          click={this.circleBtnClickHandler}
+          text = {hover?"open":"•••"}
+          click={circleBtnClickHandler}
           />
-        <HandPinch />
+        <HandPinch  hover = {hover}/>
+        </div>
         </header>
       </div>
     );
   }
-}
 
 export default App;

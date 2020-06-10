@@ -2,9 +2,8 @@ import React from 'react';
 import SmallBtn from '../SmallBtn/SmallBtn';
 import './SideDrawer.css';
 
-class SideDrawer extends React.Component {
-  render() {
-    return(
+const SideDrawer=(props)=> {
+  return(
       <nav className="SideDrawer-wrapper">
       <ul className="SideDrawer-list">
       <li className="SideDrawer-listItem">
@@ -17,10 +16,9 @@ class SideDrawer extends React.Component {
         <a href="contact">c<span className="SideDrawer-listDot">o</span>ntact</a>
       </li>
     </ul>
-    <SmallBtn text="Close" click={this.props.smallBtnClickHandler}/>
+    <SmallBtn text="Close" click={props.smallBtnClickHandler}/>
   </nav>
     )
   }
-}
 
 export default SideDrawer;

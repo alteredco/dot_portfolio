@@ -6,38 +6,39 @@
 }
 
 .smallBtn {
-text-decoration: none;
-background-color: #FF56D0;
-width: 55px;
-height: 55px;
-border-radius: 50%;
-color: #fff;
-box-shadow: 5px 4px 10px rgba(255, 86, 208, 0.15);
-transition: 0.3s;
+  text-decoration: none;
+  background-color: #ff56d0;
+  border: solid 2px#ff56d0;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 5px 4px 10px rgba(255, 86, 208, 0.15);
+  transition: 0.3s;
 }
 
 .smallBtn:hover {
-  background-color: #E3C147;
+  background-color: #e3c147;
   border: solid 2px#E3C147;
-  font-size: .8em;
+  font-size: 0.8em;
   color: #fff;
 }
 
 @media (min-width: 600px) {
   .smallBtn__container {
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .smallBtn {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    }
+  }
 
-    .smallBtn:hover {
-      font-size: 1em;
-     }
+  .smallBtn:hover {
+    font-size: 1em;
+  }
 }

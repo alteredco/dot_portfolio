@@ -1,15 +1,14 @@
 import React from 'react';
-import hand from '/Users/dash2/Desktop/dot-portfolio-app/src/assets/handPinch.svg';
 import './HandPinch.css';
+import HandSvg2 from '../HandSvg2/HandSvg2';
+import HandSvg1 from '../HandSvg1/HandSvg1';
 
-class HandPinch extends React.Component {
-  render() {
-    return(
+const HandPinch =(props)=> {
+  return(
       <div className="hand__container">
-        <img src={hand} className="hand" alt="hand" />
+        {props.hover?<HandSvg2 />:<HandSvg1/>}
       </div>
-    );
+   );
   }
-}
 
 export default HandPinch;

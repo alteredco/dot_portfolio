@@ -1,47 +1,29 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import projects from './assets/Projects.svg';
 import project1 from './assets/sq-one.svg';
 import Header from './components/Header/Header';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
-import Title from './components/Title/Title';
-import CircleBtn from './components/CircleBtn/CircleBtn';
 
-class Portfolio extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
+const Portfolio =()=>{
+  const [drawer, openDrawer] = useState(false);
+  const drawerToggleClickHandler =()=>openDrawer(!drawer);
+  const backdropClickHandler = () => openDrawer(!drawer);
 
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  };
+  let sideDrawer;
+  let backdrop;
 
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen:false});
-  };
-
-  circleBtnClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
+  if(openDrawer) {
+    sideDrawer = <SideDrawer   smallBtnClickHandler ={backdropClickHandler}/>;
+    backdrop = <Backdrop click={backdropClickHandler}/>;
   }
 
-  render() {
-    let sideDrawer;
-    let backdrop;
-
-    if(this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer   smallBtnClickHandler ={this.backdropClickHandler}/>;
-      backdrop = <Backdrop click={this.backdropClickHandler}/>;
-    }
     return (
       <div className="Portfolio">
         <header className="Portfolio-header">
         <Header 
-          drawerClickHandler={this.drawerToggleClickHandler} 
+          drawerClickHandler={drawerToggleClickHandler} 
           />
         {sideDrawer}
         {backdrop}
@@ -57,6 +39,5 @@ class Portfolio extends Component {
       </div>
     );
   }
-}
 
 export default Portfolio;
