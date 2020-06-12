@@ -1,10 +1,12 @@
 .DrawerToggleBtn-button {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: transparent;
+  justify-content: space-around;
+  top: 5%;
+  left: 2rem;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
@@ -19,8 +21,8 @@
 }
 
 .DrawerToggleBtn-line {
-  width: 40px;
-  height: 0.125rem;
+  width: 2rem;
+  height: 1rem;
   margin-bottom: 1rem;
   background-color: #fff;
 }
@@ -30,15 +32,10 @@
 }
 
 @media (min-width: 600px) {
-  .DrawerToggleBtn-button {
-    width: 50px;
-    height: 50px;
-  }
-
   .DrawerToggleBtn-line {
     width: 50px;
-    height: 0.1rem;
-    margin-bottom: 1rem;
+    height: 0.2rem;
+    margin-bottom: 0.75rem;
     background-color: #fff;
   }
 }
