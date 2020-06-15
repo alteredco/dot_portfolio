@@ -1,0 +1,31 @@
+@import "./constants.scss";
+
+.App {
+  height: $pageHeight;
+  text-align: center;
+}
+
+.App-header {
+  background-color: $backgroundColor;
+  background-size: cover;
+  background-position: top;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: $backgroundColor;
+}
+
+.App-open {
+  width: 80vw;
+}
+
+@media (min-width: 700px) {
+  .App-open {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .DotBtn {
+    padding-left: 10vw;
+  }
+}

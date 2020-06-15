@@ -1,0 +1,16 @@
+@import "../../constants.scss";
+
+.Header_container {
+  width: $mobileWidth;
+  height: 50px;
+  background-color: $headerColor;
+  box-shadow: 5px 4px 4px rgba(255, 86, 208, 0.25);
+  display: inline-block;
+  padding: 30px 0 0 20px;
+}
+
+@media (min-width: 600px) {
+  .Header_container {
+    height: 8vh;
+  }
+}
