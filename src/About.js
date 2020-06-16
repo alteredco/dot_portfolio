@@ -79,7 +79,7 @@ class About extends Component {
           <Title 
           header1="view resume"
           />
-          <a href="https://drive.google.com/file/d/183NngOFUGKO5YVBGvW6zVPPu3lAig-5M/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+          <a  className="About-resLink" href="https://drive.google.com/file/d/1yeihIFRyPN3zpJJE-djhSf0QipP5k8T7/view?usp=sharing" rel="noopener noreferrer" target="_blank">
           <CircleBtn 
           text="view"
           />

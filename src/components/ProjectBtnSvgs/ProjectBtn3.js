@@ -1,7 +1,8 @@
 import React from "react";
 
-function ProjectBtn3() {
+function ProjectBtn3(props) {
   return (
+    <button className="Project-link" onClick={props.click}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="95"
@@ -47,6 +48,7 @@ function ProjectBtn3() {
         </filter>
       </defs>
     </svg>
+    </button>
   );
 }
 

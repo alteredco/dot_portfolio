@@ -43,7 +43,7 @@ const App =() =>{
               click={circleBtnClickHandler}
               />
           </div>
-          <HandPinch  hover = {hover}/>
+          <HandPinch  hover = {hover} />
         </div>
         </header>
       </div>
