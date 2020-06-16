@@ -1,9 +1,10 @@
 import React from "react";
+import './ProjectBtn.scss';
 
 function ProjectBtn1(props) {
   return (
-    <a  className="Project-link" href={props.link} rel="noopener noreferrer" target="_blank">
-      <svg
+    <button className="Project-link" onClick={props.click}>
+      <svg className="Project__svg"
       xmlns="http://www.w3.org/2000/svg"
       width="95"
       height="94"
@@ -48,7 +49,7 @@ function ProjectBtn1(props) {
         </filter>
       </defs>
     </svg>
-  </a>
+  </button>
   );
 }
 

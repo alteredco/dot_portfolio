@@ -16,29 +16,29 @@ export const ProjectGrid = () => {
   return (
     <div className="Projects__grid">
       <div className="row1">
-          <ProjectBtn1 click={projectBtnClickHandler}/>
-          <img src={pinkSq} alt="pink-square" />
-          <img src={aquaSq} alt="aqua-square"/>
+          <ProjectBtn1 className="item" click={projectBtnClickHandler}/>
+          <img className="item" src={pinkSq} alt="pink-square" />
+          <img className="item" src={aquaSq} alt="aqua-square"/>
           </div>
           <div className="row2">
-          <img src={navySq} alt="navy-square"/>
-          <ProjectBtn2 click={projectBtnClickHandler}/>
-          <img src={aquaSq} alt="aqua-square"/>
+          <img className="item" src={navySq} alt="navy-square"/>
+          <ProjectBtn2 className="item" click={projectBtnClickHandler}/>
+          <img className="item" src={aquaSq} alt="aqua-square"/>
           </div>
           <div className="row3">
-          <img src={navySq} alt="navy-square"/>
-          <img src={pinkSq} alt="pink-square"/>
-          <ProjectBtn3 />
+          <img className="item" src={navySq} alt="navy-square"/>
+          <img className="item" src={pinkSq} alt="pink-square"/>
+          <ProjectBtn3 className="item" click={projectBtnClickHandler} />
           </div>
           <div className="row4">
-          <img src={navySq} alt="navy-square"/>
-          <ProjectBtn4 click={projectBtnClickHandler}/>
-          <img src={aquaSq} alt="aqua-square"/>
+          <img className="item" src={navySq} alt="navy-square"/>
+          <ProjectBtn4 className="item" click={projectBtnClickHandler}/>
+          <img className="item" src={aquaSq} alt="aqua-square"/>
           </div>
           <div className="row5">
-          <ProjectBtn5 click={projectBtnClickHandler}/>
-          <img src={pinkSq} alt="pink-square" />
-          <img src={aquaSq} alt="aqua-square"/>
+          <ProjectBtn5 className="item" click={projectBtnClickHandler}/>
+          <img className="item" src={pinkSq} alt="pink-square" />
+          <img className="item" src={aquaSq} alt="aqua-square"/>
           </div>
           </div>
 );

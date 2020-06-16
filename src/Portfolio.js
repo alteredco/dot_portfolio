@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './App.css';
+import './Portfolio.scss';
 import projects from './assets/Projects.svg';
 import Header from './components/Header/Header';
 import SideDrawer from './components/SideDrawer/SideDrawer';
