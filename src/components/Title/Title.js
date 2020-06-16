@@ -3,10 +3,13 @@ import './Title.css';
 
 const Title=(props)=> {
   return (
-      <div className="title">
+    <main>
+      <title className="title">
         <h1 className="firstname">{props.header1}</h1>
         <h1 className="lastname">{props.header2}</h1>
-      </div>
+      </title>
+      <h2 className="sub">Software Developer</h2>
+    </main>
     )
   }
 

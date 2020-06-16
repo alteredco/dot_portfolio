@@ -69,10 +69,11 @@ class About extends Component {
           />
         </div>
         <article className="About__text">
-          <p>I am a Front End Web Developer in training that has had a varied career in fields such as art, psychotherapy, communications and PR. I bring a diverse skill-set to my work and have much to offer clients.</p>
+          <p>I am a Software Developer that has broad career experience in fields such as education, art, communications, PR and mental health. I bring a diverse skill-set to my work and have over seven years experience working directly with clients and stakeholders.</p>
           <p>I love taking creative journeys. I have travelled and lived all over the world, gaining a huge amount of insight and understanding of how different people think and communicate. This inspires me every day.</p>
-          <p>In the future, I plan to become a Full Stack Developer. My passion is in creating human-centered design that comes to life on the screen. 
+          <p>My passion is in creating human-centered design that comes to life on the screen. 
           Design should be about people first!</p>
+          <p>In the future, I hope to secure a role as a .NET, React Developer. I have an interest in information security and recently achieved a "Certificate in Information Security Management Principles" from BCS.</p>
         </article>
         <div className="About__resume">
           <Title 
