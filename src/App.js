@@ -34,6 +34,7 @@ const App =() =>{
         <Title 
           header1="Wendy"
           header2="Kakuda" 
+          sub = "software developer"
           />
         <div className="App-open" onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
           <div className="DotBtn">
