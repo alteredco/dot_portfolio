@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import './About.css';
 import Header from './components/Header/Header';
 import SideDrawer from './components/SideDrawer/SideDrawer';
@@ -7,53 +7,28 @@ import Title from './components/Title/Title';
 import FeatureImg from './components/FeatureImg/FeatureImg';
 import CircleBtn from './components/CircleBtn/CircleBtn';
 import Footer from './components/Footer/Footer';
+import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
 
-class About extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
+ const About =()=>{
+  const [drawer, setDrawer] = useState(false);
+  // const [hover, setHover] =useState(false);
 
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  };
-
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen:false});
-  };
-
-  // resumeBtnClickHandler=(file, text)=>{
-  //  function download(file, text) {
-  //   let  element = document.createElement('a'); 
-  //   element.setAttribute('href', 'data:text/plain;charset=utf-8, ' + encodeURIComponent(text)); 
-  //   element.setAttribute('download', file); 
-    
-  //   document.body.appendChild(element); 
-  //   element.click(); 
-  //   document.body.removeChild(element); 
-  // } 
+  const drawerToggleClickHandler = () => setDrawer(!drawer);
+  const backdropClickHandler = () => setDrawer(!drawer);
   
-  // document.getElementById("btn").addEventListener("click", function() { 
-  // let  text = document.getElementById("text").value; 
-  // let filename = "Wendy_Kakuda_CV.pdf"; 
-  // download(filename, text); 
-  // }, false); 
-  // }
+  let sideDrawer;
+  let backdrop;
 
-  render() {
-    let sideDrawer;
-    let backdrop;
+  if(drawer) {
+      sideDrawer = <SideDrawer   smallBtnClickHandler ={backdropClickHandler}/>;
+      backdrop = <Backdrop click={backdropClickHandler}/>;
+  }
 
-    if(this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer   smallBtnClickHandler ={this.backdropClickHandler}/>;
-      backdrop = <Backdrop click={this.backdropClickHandler}/>;
-    }
-    return (
+  return (
       <div className="About">
         <header className="About__header">
         <Header 
-          drawerClickHandler={this.drawerToggleClickHandler} 
+          drawerClickHandler={drawerToggleClickHandler} 
           />
         {sideDrawer}
         {backdrop}
@@ -81,6 +56,7 @@ class About extends Component {
           />
           <a  className="About-resLink" href="https://drive.google.com/file/d/1yeihIFRyPN3zpJJE-djhSf0QipP5k8T7/view?usp=sharing" rel="noopener noreferrer" target="_blank">
           <CircleBtn 
+          icon={faExternalLinkAlt}
           text="view"
           />
           </a>
@@ -89,6 +65,5 @@ class About extends Component {
       </div>
     );
   }
-}
 
-export default About;
+  export default About;

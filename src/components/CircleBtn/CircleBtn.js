@@ -1,15 +1,14 @@
 import React from 'react';
 import './CircleBtn.css';
+import { Icon } from '../Icon/Icon';
 
-class CircleBtn extends React.Component {
-  render() {
-    return (
+const CircleBtn =(props)=> {
+  return (
       <div className="circleBtn__container">
-        <button className="circleBtn" onClick={this.props.click} > {this.props.text}
+        <button className="circleBtn" onClick={props.click} > <Icon icon={props.icon}/>{props.text}
         </button>
       </div>
     )
   }
-}
 
-export default CircleBtn;
+  export default CircleBtn;

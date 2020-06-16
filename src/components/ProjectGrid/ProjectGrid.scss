@@ -2,10 +2,7 @@
 
 .Projects__grid {
   max-width: 80vw;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 20vw;
 }
