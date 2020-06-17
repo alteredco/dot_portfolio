@@ -1,0 +1,64 @@
+@import "../../constants.scss";
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: none;
+
+  ul {
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    list-style-position: outside;
+  }
+}
+
+.form-control {
+  display: block;
+  border: 1px solid #eee;
+  background-color: #eee;
+  box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  text-align: center;
+  font-size: 18px;
+  color: $titleColor;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  transition: all 0.4s ease;
+
+  &:focus:invalid {
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535;
+  }
+
+  &:required:valid {
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+  }
+}
+
+label {
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 300;
+}
+
+#message {
+  width: 50%;
+  height: 150px;
+  resize: none;
+}
+
+button[type="submit"] {
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  background: #fff;
+}

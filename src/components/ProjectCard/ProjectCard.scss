@@ -1,12 +1,15 @@
-.SideDrawer-wrapper {
+@import "../../constants.scss";
+
+.ProjectCard-wrapper {
   width: 70%;
-  max-width: 400px;
-  height: 100%;
+  max-width: 90vw;
+  height: 80%;
+  overflow-y: auto;
   background-color: #fff;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50px;
+  left: 50px;
   z-index: 200;
   -webkit-transition: opacity 0.7s ease-in;
   -moz-transition: opacity 0.7s ease-in;
@@ -15,39 +18,39 @@
   transition: opacity 0.7s ease-in;
 }
 
-.SideDrawer-list {
+.ProjectCard-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: left;
-  font-size: 1.75rem;
+  text-align: center;
+  font-size: 1rem;
   font-family: "Comfortaa";
   color: #0c5dbf;
   list-style: none;
 }
 
-.SideDrawer-listItem {
+.ProjectCard-listItem {
   margin-top: 1rem;
+  a {
+    text-decoration: none;
+    color: #0c5dbf;
+  }
 }
 
-.SideDrawer-listItem a {
-  text-decoration: none;
-  color: #0c5dbf;
-}
-
-.SideDrawer-listDot {
-  color: #ff56d0;
-  font-weight: 900;
-}
-
-.SideDrawer-listItem:hover,
-.SideDrawer-listItem:active {
-  color: #ff56d0;
-  font-weight: 600;
+.ProjectCard-listItem {
+  &:active {
+    color: #ff56d0;
+  }
 }
 
 @media (min-width: 600px) {
-  .SideDrawer-list {
-    font-size: 3rem;
+  .ProjectCard-list {
+    font-size: 2rem;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

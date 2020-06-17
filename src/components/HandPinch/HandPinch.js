@@ -1,5 +1,5 @@
 import React from 'react';
-import './HandPinch.css';
+import './HandPinch.scss';
 import HandSvg2 from '../HandSvg2/HandSvg2';
 import HandSvg1 from '../HandSvg1/HandSvg1';
 

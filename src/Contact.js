@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Title from './components/Title/Title';
-import CircleBtn from './components/CircleBtn/CircleBtn';
 import ContactForm from './components/ContactForm/ContactForm';
 
 const Contact = () => {
@@ -13,7 +12,6 @@ const Contact = () => {
 
   const drawerToggleClickHandler = () => setDrawer(!drawer);
   const backdropClickHandler = () => setDrawer(!drawer);
-  const circleBtnClickHandler = () => setDrawer(!drawer);
 
   let sideDrawer;
   let backdrop;
@@ -31,13 +29,9 @@ const Contact = () => {
           />
         {sideDrawer}
         {backdrop}
-        <Title header1="This is Contact page."
+        <Title header1="Contact"
         />
         <ContactForm />
-        <CircleBtn 
-          text = ">" 
-          click={circleBtnClickHandler}
-          />
         </header>
       </div>
     );

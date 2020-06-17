@@ -1,0 +1,17 @@
+@import "../../constants.scss";
+
+.Preview__img {
+  max-width: 80%;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  .Preview__main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Preview__img {
+    max-width: 45%;
+  }
+}

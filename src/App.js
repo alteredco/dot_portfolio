@@ -32,6 +32,7 @@ const App =() =>{
         {sideDrawer}
         {backdrop}
         <Title 
+        className="title"
           header1="Wendy"
           header2="Kakuda" 
           sub = "software developer"

@@ -9,6 +9,10 @@
   width: 80vw;
 }
 
+.title {
+  @include fade-in;
+}
+
 @media (min-width: 700px) {
   .App-open {
     width: 90vw;

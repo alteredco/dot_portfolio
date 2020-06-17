@@ -1,4 +1,6 @@
 import React from "react";
+import './ContactForm.scss';
+import SmallBtn from "../SmallBtn/SmallBtn";
 
 const ContactForm = (props)=> {
   return (
@@ -9,12 +11,16 @@ const ContactForm = (props)=> {
       <label for="company">COMPANY</label>
       <input type="company" className="form-control" name="company" id="company" placeholder="Bebop Big Shots Ltd" />
       <label for="message">MESSAGE</label>
-      <input type="message" className="form-control" name="message" id="message" placeholder="See you Space Cowboy..."
+      <textarea type="message" className="form-control" name="message" id="message" placeholder="See you Space Cowboy..."
               required />
       <label for="email">EMAIL ADDRESS</label>
       <input type="email" className="form-control" name="email" id="email" placeholder="myfunnyvalentine@ein.ed"
               required />
-      <button type="submit" id="submit">Submit</button>
+      <button type="submit" id="submit">
+      <SmallBtn 
+          text = "Submit"
+          />
+          </button>
     </form>
   );
 }
