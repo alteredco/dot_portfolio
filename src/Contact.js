@@ -1,58 +1,46 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Title from './components/Title/Title';
 import CircleBtn from './components/CircleBtn/CircleBtn';
+import ContactForm from './components/ContactForm/ContactForm';
 
-class Contact extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
+const Contact = () => {
+  const [drawer, setDrawer] = useState(false);
+  // const [hover, setHover] =useState(false);
 
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  };
+  const drawerToggleClickHandler = () => setDrawer(!drawer);
+  const backdropClickHandler = () => setDrawer(!drawer);
+  const circleBtnClickHandler = () => setDrawer(!drawer);
 
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen:false});
-  };
+  let sideDrawer;
+  let backdrop;
 
-  circleBtnClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  }
-
-  render() {
-    let sideDrawer;
-    let backdrop;
-
-    if(this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer   smallBtnClickHandler ={this.backdropClickHandler}/>;
-      backdrop = <Backdrop click={this.backdropClickHandler}/>;
+    if(drawer) {
+      sideDrawer = <SideDrawer   smallBtnClickHandler ={backdropClickHandler}/>;
+      backdrop = <Backdrop click={backdropClickHandler}/>;
     }
+
     return (
       <div className="Contact">
         <header className="Contact-header">
         <Header 
-          drawerClickHandler={this.drawerToggleClickHandler} 
+          drawerClickHandler={drawerToggleClickHandler} 
           />
         {sideDrawer}
         {backdrop}
         <Title header1="This is Contact page."
         />
+        <ContactForm />
         <CircleBtn 
           text = ">" 
-          click={this.circleBtnClickHandler}
+          click={circleBtnClickHandler}
           />
         </header>
       </div>
     );
   }
-}
 
 export default Contact;

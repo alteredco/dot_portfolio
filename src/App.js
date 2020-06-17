@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './App.scss';
-import {faEllipsisH} from '@fortawesome/free-solid-svg-icons';
 import Header from './components/Header/Header';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
