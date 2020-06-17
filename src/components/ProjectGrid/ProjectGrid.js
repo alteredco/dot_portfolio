@@ -26,7 +26,7 @@ export const ProjectGrid = () => {
   let backdrop;
 
   if(modal){
-    projCard = <ProjectCard content = {modalContent}/>;
+    projCard = <ProjectCard content = {modalContent} smallBtnClickHandler ={backdropClickHandler} />;
     backdrop = <Backdrop click={backdropClickHandler}/>;
   }
 
