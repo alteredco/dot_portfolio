@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './About.css';
+import './About.scss';
 import Header from './components/Header/Header';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';

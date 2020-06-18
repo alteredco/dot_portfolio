@@ -1,3 +1,5 @@
+@import "../../constants.scss";
+
 .smallBtn__container {
   width: 100%;
   display: flex;
@@ -8,7 +10,7 @@
 .smallBtn {
   text-decoration: none;
   background-color: #ff56d0;
-  border: solid 2px#ff56d0;
+  border: solid 2px #ff56d0;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -16,13 +18,14 @@
   outline: none;
   box-shadow: 5px 4px 10px rgba(255, 86, 208, 0.15);
   transition: 0.3s;
-}
 
-.smallBtn:hover {
-  background-color: #e3c147;
-  border: solid 2px#E3C147;
-  font-size: 0.8em;
-  color: #fff;
+  &:hover {
+    background-color: #e3c147;
+    border: solid 2px #e3c147;
+    font-size: 0.8em;
+    color: #fff;
+    @include grow;
+  }
 }
 
 @media (min-width: 600px) {
@@ -37,9 +40,9 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-  }
 
-  .smallBtn:hover {
-    font-size: 1em;
+    &:hover {
+      font-size: 1em;
+    }
   }
 }

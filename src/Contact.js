@@ -5,6 +5,7 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Title from './components/Title/Title';
 import ContactForm from './components/ContactForm/ContactForm';
+import Footer from './components/Footer/Footer';
 
 const Contact = () => {
   const [drawer, setDrawer] = useState(false);
@@ -33,6 +34,7 @@ const Contact = () => {
         />
         <ContactForm />
         </header>
+        <Footer  className="footer" />
       </div>
     );
   }

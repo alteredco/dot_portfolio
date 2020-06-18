@@ -65,6 +65,13 @@ $prefix: "-moz-", "-webkit-", "-o-", "-ms-", "";
   animation: fadein 1s;
 }
 
+@mixin grow {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 @mixin atSmall {
   @media (min-width: 530px) {
   }

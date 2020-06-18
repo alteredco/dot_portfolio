@@ -1,5 +1,5 @@
 import React from 'react';
-import './SmallBtn.css';
+import './SmallBtn.scss';
 
 const SmallBtn =(props)=> {
   return (

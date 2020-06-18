@@ -3,5 +3,7 @@
 .Project-link {
   text-decoration: none;
   outline: none;
-  border: none;
+  border: 0;
+  padding: 0;
+  @include grow;
 }

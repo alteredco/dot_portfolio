@@ -2,16 +2,12 @@
 
 .Portfolio {
   height: $pageHeight;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .Projects__title {
   margin-top: 2rem;
   @include fade-in;
-}
-
-@media (min-width: 700px) {
-}
-
-@media (min-width: 1400px) {
 }
