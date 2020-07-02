@@ -12,6 +12,16 @@
 /build
 
 # misc
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
 .DS_Store
 .env.local
 .env.development.local
