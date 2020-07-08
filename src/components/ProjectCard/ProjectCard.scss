@@ -2,6 +2,7 @@
 
 .ProjectCard-wrapper {
   overflow-y: auto;
+  height: auto;
   background-color: #fff;
   color: $titleColor;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
@@ -16,11 +17,9 @@
   margin-right: auto;
   @include atSmall {
     max-width: $mobileWidth;
-    height: 100vh;
   }
   @include atMedium {
     max-width: 90vw;
-    height: 80%;
   }
 }
 
@@ -36,12 +35,17 @@
     max-width: $mobileWidth;
   }
   @include atMedium {
-    max-width: 80vw;
+    max-width: 100%;
   }
 }
 
 .ProjectCard-title {
-  font-size: 2rem;
+  @include atSmall {
+    font-size: 2rem;
+  }
+  @include atMedium {
+    font-size: 3rem;
+  }
 }
 
 .ProjectCard-list {
@@ -49,10 +53,15 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: 1rem;
   font-family: "Comfortaa";
   color: #0c5dbf;
   list-style: none;
+  @include atSmall {
+    font-size: 1rem;
+  }
+  @include atMedium {
+    font-size: 2rem;
+  }
 }
 
 .ProjectCard-listItem {
@@ -74,25 +83,7 @@
   padding-bottom: 1rem;
 }
 
-@media (min-width: 600px) {
-  .ProjectCard-wrapper {
-    width: 70%;
-    max-width: 90vw;
-    height: auto;
-  }
-
-  .ProjectCard-title {
-    font-size: 3rem;
-  }
-
-  .ProjectCard-header {
-    width: 100%;
-  }
-
-  .ProjectCard-list {
-    font-size: 2rem;
-  }
-
+@include atMedium {
   .row {
     display: flex;
     flex-direction: row;
