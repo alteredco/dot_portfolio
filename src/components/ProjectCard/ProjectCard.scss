@@ -70,6 +70,10 @@
     text-decoration: none;
     font-weight: bold;
     color: $highlightColor;
+    &:hover {
+      @include grow(1.05);
+      color: $hoverColor;
+    }
   }
 }
 

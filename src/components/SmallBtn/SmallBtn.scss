@@ -24,7 +24,7 @@
     border: solid 2px #e3c147;
     font-size: 0.8em;
     color: #fff;
-    @include grow;
+    @include grow(1.1);
   }
 }
 

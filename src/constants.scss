@@ -65,10 +65,10 @@ $prefix: "-moz-", "-webkit-", "-o-", "-ms-", "";
   animation: fadein 1s;
 }
 
-@mixin grow {
+@mixin grow($scale) {
   transition: all 0.2s ease-in-out;
   &:hover {
-    transform: scale(1.1);
+    transform: scale($scale);
   }
 }
 
