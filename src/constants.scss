@@ -73,16 +73,13 @@ $prefix: "-moz-", "-webkit-", "-o-", "-ms-", "";
 }
 
 @mixin atSmall {
-  @media (min-width: 530px) {
+  @media (min-width: 230px) {
+    @content;
   }
 }
 
 @mixin atMedium {
   @media (min-width: 800px) {
-  }
-}
-
-@mixin atLarge {
-  @media (min-width: 1010px) {
+    @content;
   }
 }

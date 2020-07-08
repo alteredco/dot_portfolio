@@ -1,9 +1,6 @@
 @import "../../constants.scss";
 
 .ProjectCard-wrapper {
-  width: $mobileWidth;
-  max-width: 90vw;
-  height: 80%;
   overflow-y: auto;
   background-color: #fff;
   color: $titleColor;
@@ -17,10 +14,17 @@
   transition: opacity 0.7s ease-in;
   margin-left: auto;
   margin-right: auto;
+  @include atSmall {
+    max-width: $mobileWidth;
+    height: 100vh;
+  }
+  @include atMedium {
+    max-width: 90vw;
+    height: 80%;
+  }
 }
 
 .ProjectCard-header {
-  width: $mobileWidth;
   height: 5vh;
   background-color: $headerColor;
   box-shadow: 5px 4px 4px rgba(255, 86, 208, 0.25);
@@ -28,6 +32,12 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 0 1rem 2rem;
+  @include atSmall {
+    max-width: $mobileWidth;
+  }
+  @include atMedium {
+    max-width: 80vw;
+  }
 }
 
 .ProjectCard-title {
